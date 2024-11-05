@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали Хоккейного Матча - Мой Город</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #263238;
+        color: #FF9800;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #263739;
+        padding: 15px;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .logo {
+        height: 40px;
+        margin-left: 20px;
+    }
+    
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-menu li a {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-weight: bold;
+        padding: 10px 15px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .nav-menu li a:hover {
+        background-color: #FF9800;
+        border-radius: 5px;
+    }
+    
+    .register-button {
+        background: #FFC107;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        margin-left: auto;
+    }
+    
+    .register-button:hover {
+        background: #FF9800;
+    }
+    
+    .profile-button {
+        margin-left: auto;
+    }
+    
+    .profile-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    
+    .profile-icon:hover {
+        transform: scale(1.1);
+    }
+
+    .event-details-container {
+        display: flex;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .event-image img {
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-info {
+        flex: 2;
+    }
+
+    .event-info p {
+        color: #FFFFFF;
+    }
+
+    .event-meta {
+        flex: 1;
+        background-color: #263739;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-meta h3 {
+        margin-top: 0;
+        color: #007bff;
+    }
+
+    .event-meta p {
+        color: #FFFFFF;
+    }
+
+    .buy-ticket-button {
+        display: inline-block;
+        background-color: #ff6600;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 1.2em;
+    }
+
+    .buy-ticket-button:hover {
+        background-color: #e65c00;
+    }
+
+    .age-limit {
+        background-color: #ff6600;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    #emergency {
+        background: #dc3545;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    #emergency-button {
+        background: #fff;
+        color: #dc3545;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #emergency-button:hover {
+        background: #e6e6e6;
+    }
+
+    footer {
+        background-color: #263739;
+        color: #FF9800;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #FF9800;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .footer-button:hover {
+        background-color: #FF6F61;
+    }
+
+    @media (max-width: 400px) {
+        body {
+            padding: 10px;
+        }
+    
+        .event-details-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        .event-image img {
+            width: 100%;
+            height: auto;
+        }
+    
+        .nav-menu {
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .nav-menu li {
+            display: block;
+        }
+    
+        .register-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+    
+        .profile-icon {
+            width: 30px;
+            height: 30px;
+        }
+    
+        .event-info h1 {
+            font-size: 1.5em;
+        }
+    
+        .buy-ticket-button {
+            font-size: 1em;
+            padding: 8px 15px;
+        }
+    
+        .event-meta {
+            padding: 15px;
+        }
+    
+        footer {
+            font-size: 0.9em;
+        }
+    }
+    
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../static/logo.png" alt="Logo" class="logo">
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html">События</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="extra.html">Экстренная помощь</a></li>
+                <li><a href="forum.html">Форум</a></li>
+                <li style="margin: 0 15px;"><a href="notifications.html">Уведомления</a></li>
+                <li><a href="register.html" class="register-button">Войти/Регистрация</a></li>
+            </ul>
+            <a href="profile.html" class="profile-button">
+                <img src="../static/profile_img.png" alt="Профиль" class="profile-icon">
+            </a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="event-details">
+            <div class="event-details-container">
+                <div class="event-image">
+                    <img src="../static/5pic.webp" alt="Хоккейный матч">
+                </div>
+                <div class="event-info">
+                    <h1 style="color: #FF9800;">Хоккейный матч - Qulager vs Nomad 31 октября</h1>
+                    <h3>ОПИСАНИЕ</h3>
+                    <p>30 и 31 октября хоккейный клуб Qulager принимает столичный Nomad. Встречи с одним из лидеров казахстанского хоккея всегда проходят в напряженной борьбе. Особенно сейчас, когда в тени «Номада» все столичные коллективы, включая «Барыс».</p>
+                    <a target="_blank" class="buy-ticket-button" href="https://ticketon.kz/petropavlovsk/event/match-hk-qulager-vvs-nomad?item_list_name=%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F&item_list_id=allEvents&index=2">Купить билет</a>
+                </div>
+                <div class="event-meta">
+                    <h3>МЕСТО ПРОВЕДЕНИЯ</h3>
+                    <p style="color: white;">г. Петропавловск, ул. Жамбыла Жабаева, 84, Дворец спорта Александра Винокурова</p>
+                    <h3>ДАТА ПРОВЕДЕНИЯ</h3>
+                    <p style="color: white;">31 октября, 2024</p>
+                    <h3>НАЧАЛО</h3>
+                    <p style="color: white;">19:00</p>
+                    <h3>ПРОДОЛЖИТЕЛЬНОСТЬ</h3>
+                    <p style="color: white;">120 минут</p>
+                    <h3>ДОПОЛНИТЕЛЬНО</h3>
+                    <p style="color: white;">Детям до 5 лет вход бесплатный без предоставления места. Пенсионерам, инвалидам всех групп – бесплатно с предоставлением места. Для получения бесплатного билета необходимо предоставить подтверждающие документы в кассе во ДС А.Винокурова.</p>
+                    <h3>ЖАНР</h3>
+                    <p style="color: white;">хоккей</p>
+                    <h3>ВОЗРАСТНОЕ ОГРАНИЧЕНИЕ</h3>
+                    <div class="age-limit">
+                        <span>0+</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>С уважением команда ITshechka.<br>© 2024 My City. Все права защищены.</p>
+        <a href="resourses.html" class="footer-button">Ресурсы</a>
+    </footer>
+</body>
+</html>

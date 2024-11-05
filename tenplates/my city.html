@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="../static/my city.css">
+</head>
+<body>
+
+<div class="registration-form" style="color: #FF9800;">
+    <h2>Регистрация</h2>
+    <form action="/register" method="POST">
+        <label for="username" style="color: #FF9800;">Имя пользователя</label>
+        <input type="text" id="username" name="username" required style="border: 4px solid #FF9800;">
+
+        <label for="email" style="color: #FF9800;">Электронная почта</label>
+        <input type="email" id="email" name="email" required style="border: 4px solid #FF9800;">
+
+        <label for="password" style="color: #FF9800;">Пароль</label>
+        <input type="password" id="password" name="password" required style="border: 4px solid #FF9800;">
+
+        <label for="confirm-password" style="color: #FF9800;">Подтвердите пароль</label>
+        <input type="password" id="confirm-password" name="confirm-password" required style="border: 4px solid #FF9800;">
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+    <div class="login">
+        <a href="login.html" style="display: inline-block; margin-top: 10px; text-align: center; text-decoration: none; color: #FF9800;">Уже есть аккаунт? Войти</a>
+    </div>
+    <a href="index.html" class="back-button">На главную</a>
+</div>
+
+</body>
+</html>

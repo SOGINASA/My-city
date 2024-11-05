@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #263238;
+}
+
+.login-form {
+    width: 300px;
+    padding: 20px;
+    background-color: #263739; /* Цвет фона формы */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF9800; /* Цвет заголовка h2 */
+}
+
+.login-form label {
+    font-size: 14px;
+    color: #263739; /* Цвет текста меток */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 16px;
+    border: 1px solid #263739; /* Цвет рамки полей ввода */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF9800; /* Основной цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Без границ */
+    border-radius: 4px; /* Скругленные углы */
+    cursor: pointer; /* Указатель курсора */
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.login-form button:hover {
+    background-color: #FF6F61; /* Цвет кнопки при наведении */
+}

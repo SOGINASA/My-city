@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/services.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../static/logo.png" alt="Logo" class="logo">
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html">События</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="extra.html">Экстренная помощь</a></li>
+                <li><a href="forum.html">Форум</a></li>
+                <li><a href="notifications.html">Уведомления</a></li>
+                <li><a href="register.html" class="register-button">Войти /Регистрация</a></li>
+            </ul>
+            <a href="profile.html" class="profile-button">
+                <img src="../static/profile_img.png" alt="Профиль" class="profile-icon">
+            </a>
+        </nav>
+    </header>
+
+    <section id="filter-menu">
+        <h3 id="fsob">Фильтр событий:</h3>
+        <select id="event-filter" onchange="filterEvents()" class="filter-select">
+            <option value="all">Все</option>
+            <option value="sport">Спорт</option>
+            <option value="clinic">Поликлиники</option>
+            <option value="parking">Парковки</option>
+        </select>
+    </section>
+    
+    <main>
+        <section id="services" class="services-section" style="background-color: #263238; color: #fff;">
+            <h2 style="margin-left: 610px;">Городские услуги</h2>
+            <div class="service-item" style="border: 3px solid #FF9800;">
+                <img src="../static/serv_1.webp" alt="Поликлиника №1" class="service-image" style="width: 300px; height: 300px;">
+                <div class="service-info">
+                    <h3>Поликлиника №1</h3>
+                    <p>Услуги медицинской помощи для всех возрастных групп. Доступны консультации врачей, анализы и лечение.</p>
+                </div>
+                <div class="service-action">
+                    <button class="contact-button" onclick="window.location.href='tel:+7 (7152) 70-62-41'">Связаться</button>
+                    <a href="https://1gorpol.kz/" class="web-button" target="_blank">Сайт заведения</a>
+                    <button class="map-button" onclick="showMap('54.851538,69.114163', 'Городская поликлиника №1')">Посмотреть на карте</button>
+                </div>
+                <img src="../static/qrcode_1.png" alt="QR Code" class="qr-code" style="width: 150px; height: 150px;">
+            </div>
+            <div class="service-item" style="border: 3px solid #FF9800;">
+                <img src="../static/serv_2.webp" alt="Поликлиника №2" class="service-image" style="width: 300px; height: 300px;">
+                <div class="service-info">
+                    <h3>Поликлиника №2</h3>
+                    <p>Услуги медицинской помощи для всех возрастных групп. Пункт вакцинации.</p>
+                </div>
+                <div class="service-action">
+                    <button class="contact-button" onclick="window.location.href='tel:+7 (7152) 33-03-60'">Связаться</button>
+                    <a href="https://2gorpol.kz/ru/" class="web-button" target="_blank">Сайт заведения</a>
+                    <button class="map-button" onclick="showMap('54.868723, 69.156989', 'Поликлиника №2')">Посмотреть на карте</button>
+                </div>
+                <img src="../static/qrcode_2.png" alt="QR Code" class="qr-code" style="width: 150px; height: 150px;">
+            </div>
+            <div class="service-item" style="border: 3px solid #FF9800;">
+                <img src="../static/serv_3.webp" alt="Больница №3" class="service-image" style="width: 300px; height: 300px;">
+                <div class="service-info">
+                    <h3>Больница №3</h3>
+                    <p>Услуги медицинской помощи для всех возрастных групп. Доступны консультации врачей, анализы и лечение. "Мы обязуемся заботиться о пациентах, об их будущем; освоить новые технологии и методы в области здравоохранения; мы посвящаем себя стремлению к совершенству и развитию человеческих способностей."</p>
+                </div>
+                <div class="service-action">
+                    <button class="contact-button" onclick="window.location.href='tel:+7 (7152) 62-55-00'">Связаться</button>
+                    <a href="https://poliklinika.sko.kz/" class="web-button" target="_blank">Сайт заведения</a>
+                    <button class="map-button" onclick="showMap('54.891877, 69.136756', 'Больница №3')">Посмотреть на карте</button>
+                </div>
+                <img src="../static/qrcode_3.png" alt="QR Code" class="qr-code" style="width: 150px; height: 150px;">
+            </div>
+            <div class="service-item" style="border: 3px solid #FF9800;">
+                <img src="../static/serv_4.webp" alt="Фитнес зал VM GYM" class="service-image" style="width: 300px; height: 300px;">
+                <div class="service-info">
+                    <h3>Фитнес зал "VM GYM"</h3>
+                    <p>Фитнес, бассейн, тренажерный зал и различные секции для детей и взрослых.</p>
+                </div>
+                <div class="service-action">
+                    <button class="contact-button" onclick="window.location.href='tel:+77714853539'">Связаться</button>
+                    <button class="map-button" onclick="showMap('54.865504,69.131776', 'Спортивный центр Олимп')">Посмотреть на карте</button>
+                </div>
+                <img src="../static/qrcode_4.png" alt="QR Code" class="qr-code" style="width: 150px; height: 150px;">
+            </div>
+            <div class="service-item" style="border: 3px solid #FF9800;">
+                <img src="../static/serv_5.webp" alt="Спортивный зал Fitness Family" class="service-image" style="width: 300px; height: 300px;">
+                <div class="service-info">
+                    <h3>Спортивный, тренажёрный зал "Fitness Family"</h3>
+                    <p>Фитнес, бассейн, тренажерный зал и различные секции для детей и взрослых.</p>
+                </div>
+                <div class="service-action">
+                    <button class="contact-button" onclick="window.location.href='tel:+7 (707) 635-20-20'">Связаться</button>
+                    <button class="map-button" onclick="showMap('54.874455,69.124852', 'Спортивный, тренажёрный зал Fitness Family')">Посмотреть на карте</button>
+                </div>
+                <img src="../static/qrcode_5.png" alt="QR Code" class="qr-code" style="width: 150px; height: 150px;">
+            </div>
+            <div class="service-item" style="border: 3px solid #FF9800;">
+                <img src="../static/serv_6.webp" alt="Фитнес клуб Icon" class="service-image" style="width: 300px; height: 300px;">
+                <div class="service-info">
+                    <h3>Спортивный, тренажёрный зал фитнес-клуб "Icon"</h3>
+                    <p>Чистый зал, современное оборудование, высококвалифицированный персонал.</p>
+                </div>
+                <div class="service-action">
+                    <button class="contact-button" onclick="window.location.href='tel:+7 (777) 924-23-60'">Связаться</button>
+                    <button class="map-button" onclick="showMap('54.868176, 69.146840', 'Спортивный, тренажёрный зал фитнес-клуб Icon')">Посмотреть на карте</button>
+                </div>
+                <img src="../static/qrcode_6.png" alt="QR Code" class="qr-code" style="width: 150px; height: 150px;">
+            </div>
+            <div class="service-item" style="border: 3px solid #FF9800;">
+                <img src="../static/serv_7.png" alt="Парковка ТЦ Avrora" class="service-image" style="width: 300px; height: 300px;">
+                <div class="service-info">
+                    <h3>Автомобильная парковка ТЦ Avrora</h3>
+                </div>
+                <div class="service-action">
+                    <button class="map-button" onclick="showMap('54.869278, 69.127680', 'Парковка 1')">Посмотреть на карте</button>
+                </div>
+            </div>
+            <div class="service-item" style="border: 3px solid #FF9800;">
+                <img src="../static/serv_8.png" alt="Парковка ТРЦ Рахмет" class="service-image" style="width: 300px; height: 300px;">
+                <div class="service-info">
+                    <h3>Автомобильная парковка ТРЦ Рахмет</h3>
+                </div>
+                <div class="service-action">
+                    <button class="map-button" onclick="showMap('54.865565, 69.132278', 'Парковка 2')">Посмотреть на карте</button>
+                </div>
+            </div>
+            <div class="service-item" style="border: 3px solid #FF9800;">
+                <img src="../static/serv_9.png" alt="Парковка ТРЦ City Mall" class="service-image" style="width: 300px; height: 300px;">
+                <div class="service-info">
+                    <h3>Автомобильная парковка ТРЦ City Mall</h3>
+                </div>
+                <div class="service-action">
+                    <button class="map-button" onclick="showMap('54.908044, 69.143899', 'Парковка 3')">Посмотреть на карте</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="map-modal">
+        <div id="map" style="width: 80%; height: 80%;"></div>
+        <button onclick="closeMap()" style="position: absolute; top: 20px; right: 20px; padding: 10px 20px; background: #dc3545; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Закрыть карту</button>
+    </div>
+    
+    <footer>
+        <p>С уважением команда ITshechka.<br>© 2024 My City. Все права защищены.</p>
+        <a href="resourses.html" class="footer-button">Ресурсы</a>
+    </footer>
+
+    <script src="services.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bbedf925-4a42-423f-b41b-cc99d421a629&lang=ru_RU" type="text/javascript"></script>
+</body>
+</html>

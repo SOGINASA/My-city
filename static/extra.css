@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F5F7;
+    color: #2E2E2E;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header {
+    text-align: center;
+    background-color: #263739;
+    color: #FF9800;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    height: 40px;
+    margin-left: 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-menu li a:hover {
+    background-color: #FF9800;
+}
+
+.register-button {
+    background: #FFC107;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-left: auto;
+}
+
+.register-button:hover {
+    background: #FF9800;
+}
+
+.profile-button {
+    margin-left: auto;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: none;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    color: #FF9800;
+    margin-bottom: 8px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+}
+
+.button-primary {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button-primary:hover {
+    background-color: #3AAFA9;
+}
+
+.button-secondary {
+    background-color: #3AAFA9;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button-secondary:hover {
+    background-color: #4CAF50;
+}
+
+.emergency-options {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-option {
+    padding: 8px;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.button-option:hover {
+    background-color: #F08070;
+}
+
+#status {
+    margin-top: 15px;
+    color: #FF6F61;
+    font-size: 14px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries for Mobile Optimization (375x812) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .button-primary, .button-secondary, .button-option, .back-button {
+        width: 100%;
+    }
+
+    .nav-menu li a {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+}

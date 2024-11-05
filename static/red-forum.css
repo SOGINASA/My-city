@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #263238;
+    color: #FF9800;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #263739;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 40px;
+    margin-left: 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #FF9800;
+    border-radius: 5px;
+}
+
+.register-button {
+    background: #FFC107;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-left: auto;
+}
+
+.register-button:hover {
+    background: #FF9800;
+}
+
+#add-idea {
+    padding: 40px;
+    background-color: #1A1E22;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+h2 {
+    color: #FF9800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #1A1E22;
+    color: #fff;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[readonly] {
+    background-color: #333;
+    color: #FF9800;
+    border: none;
+}
+
+#submit-idea-button {
+    display: block;
+    width: 100%;
+    background-color: #FF9800;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-idea-button:hover {
+    background-color: #e68a00;
+}
+
+footer {
+    background-color: #263739;
+    color: #FF9800;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #FF9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #FF6F61;
+}
+
+.profile-button {
+    margin-left: auto;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+
+    #hero h1 {
+        font-size: 1.8em;
+    }
+
+    .card {
+        width: 80%;
+        max-width: 280px;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+    }
+
+    .register-button {
+        font-size: 1em;
+    }
+
+    .profile-button {
+        display: block;
+        margin-top: 10px;
+    }
+}

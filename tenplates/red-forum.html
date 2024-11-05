@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление идеи - My City</title>
+    <link rel="stylesheet" href="../static/red-forum.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../static/logo.png" alt="Logo" class="logo">
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html">События</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="extra.html">Экстренная помощь</a></li>
+                <li><a href="forum.html">Форум</a></li>
+                <li><a href="register.html" class="register-button">Войти/Регистрация</a></li>
+            </ul>
+            <a href="profile.html" class="profile-button">
+                <img src="../static/profile_img.png" alt="Профиль" class="profile-icon">
+            </a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="add-idea">
+            <div class="container">
+                <h2>Добавьте свою идею</h2>
+                <form id="idea-form" action="/submit-idea" method="POST">
+                    <label for="idea-title">Идея:</label>
+                    <input type="text" id="idea-title" name="idea-title" placeholder="Введите вашу идею" required>
+                    
+                    <label for="author">Автор:</label>
+                    <input type="text" id="author" name="author" value="{{ current_user.name }}" readonly>
+                    
+                    <label for="idea-description">Описание:</label>
+                    <textarea id="idea-description" name="idea-description" placeholder="Опишите вашу идею подробнее" rows="6" required></textarea>
+                    
+                    <button type="submit" id="submit-idea-button">Отправить идею</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>С уважением команда ITshechka.<br>© 2024 My City. Все права защищены.</p>
+        <a href="resourses.html" class="footer-button">Ресурсы</a>
+    </footer>
+</body>
+</html>

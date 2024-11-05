@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My City - Главная</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../static/logo.png" alt="Logo" class="logo">
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html">События</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="extra.html">Экстренная помощь</a></li>
+                <li><a href="forum.html">Форум</a></li>
+                <li style="margin: 0 15px;"><a href="notifications.html">Уведомления</a></li>
+                <li><a href="register.html" class="register-button">Войти/Регистрация</a></li>
+            </ul>
+            <a href="profile.html" class="profile-button">
+                <img src="../static/profile_img.png" alt="Профиль" class="profile-icon">
+            </a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <div class="overlay"></div>
+            <h1>Добро пожаловать в Петропавловск!</h1>
+            <p>Будьте в курсе событий, сервисов и удобств в вашем городе вместе с <b>My City.</b></p>
+        </section>
+        
+        <section id="filter-menu">
+            <h3 id="fsob">Фильтр событий:</h3>
+            <select id="event-filter" onchange="filterEvents()" class="filter-select">
+                <option value="all">Все</option>
+                <option value="sport">Спорт</option>
+                <option value="concert">Концерты</option>
+                <option value="entertainment">Развлечения</option>
+                <option value="other">Другое</option>
+            </select>
+        </section>
+
+        <section id="events" class="card-section" style="background-color: #263238; color: #fff;">
+            <h2 style="margin-left: 780px;">Городские события</h2>
+            <div id="event-cards" class="cards">
+                <div class="card" data-category="entertainment" style="border: 4px solid #FF9800;">
+                    <a href="1.html">
+                        <img src="../static/2pic.webp" alt="Вечеринка 2000-х" class="event-image">
+                    </a>
+                    <div class="card-content">
+                        <h3 id="qwe">Вечеринка 2000х группа Инфинити</h3>
+                        <p>15 ноября в «Royal Palace» тебя ждёт «незабываемая ночь в стиле 2000-х» с выступлением легендарной группы «Инфинити»!</p>
+                        <div class="event-details">
+                            <div class="event-date">
+                                <span id="material-icons"><b>Дата:</b></span>
+                                <p>вс, 17 ноя, 19:00</p>
+                            </div>
+                            <div class="event-location">
+                                <span class="material-icons"><b>Локация:</b></span>
+                                <p>Областная филармония</p>
+                            </div>
+                            <div class="event-price">
+                                <span class="material-icons"><b>Цена:</b></span>
+                                <p>от 6000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="entertainment" style="border: 4px solid #FF9800;">
+                    <a href="2.html">
+                        <img src="../static/6pic.jpg" alt="Щелкунчик" class="event-image">
+                    </a>
+                    <div class="card-content">
+                        <h3 id="qwe">Спектакль "Щелкунчик"</h3>
+                        <p>Балет для всей семьи в Петропавловске. Балет в 2х действиях. Сказка, которая завораживает детей и по которой тоскуют взрослые. Произведение немецкого сказочника Гофмана давно сроднилось с музыкой Чайковского.</p>
+                        <div class="event-details">
+                            <div class="event-date">
+                                <span class="material-icons"><b>Дата:</b></span>
+                                <p>вс, 17 ноя, 19:00</p>
+                            </div>
+                            <div class="event-location">
+                                <span class="material-icons"><b>Локация:</b></span>
+                                <p>Областная филармония</p>
+                            </div>
+                            <div class="event-price">
+                                <span class="material-icons"><b>Цена:</b></span>
+                                <p>от 6000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="concert" style="border: 4px solid #FF9800;">
+                    <a href="3.html">
+                        <img src="../static/3pic.webp" alt="ORDA Tour" class="event-image">
+                    </a>
+                    <div class="card-content">
+                        <h3 id="qwe">ORDA в Петропавловск. Tour 2024</h3>
+                        <p>Концерт группы ORDA в областной филармонии. Группа ORDA за 24 года существования объявляет свой первый тур по Казахстану!
+
+                            ORDA - популярный казахстанский бойзбенд, который по сей день покоряет сердца слушателей, благодаря современному и динамичному звучанию, сочетая элементы поп-рока и казахской этники.</p>
+                        <div class="event-details">
+                            <div class="event-date">
+                                <span class="material-icons"><b>Дата:</b></span>
+                                <p>чт, 28 ноя, 19:30</p>
+                            </div>
+                            <div class="event-location">
+                                <span class="material-icons"><b>Локация:</b></span>
+                                <p>Областная филармония</p>
+                            </div>
+                            <div class="event-price">
+                                <span class="material-icons"><b>Цена:</b></span>
+                                <p>от 7000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="border: 4px solid #FF9800;">
+                    <a href="4.html">
+                        <img src="../static/5pic.webp" alt="Концерт на площади" class="event-image">
+                    </a>
+                    <div class="card-content">
+                        <h3 id="qwe">Хоккейный матч-Qulager vs Nomad</h3>
+                        <p>Приходите на концерт матч нашей команды!</p>
+                        <div class="event-details">
+                            <div class="event-date">
+                                <span class="material-icons"><b>Дата:</b></span>
+                                <p>пт, 31 окт, 19:00</p>
+                            </div>
+                            <div class="event-location">
+                                <span class="material-icons"><b>Локация:</b></span>
+                                <p>Дворец спорта имени Александра Винокурова</p>
+                            </div>
+                            <div class="event-price">
+                                <span class="material-icons"><b>Цена:</b></span>
+                                <p>бесплатно</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="border: 4px solid #FF9800;">
+                    <a href="5.html">
+                        <img src="../static/1pic.webp" alt="Фестиваль еды" class="event-image">
+                    </a>
+                    <div class="card-content">
+                        <h3 id="qwe">Nurbolat Abdullin Петропавл қаласында</h3>
+                        <p>Мы рады пригласить вас на концерт Нурболата Абдуллина!</p>
+                        <div class="event-details">
+                            <div class="event-date">
+                                <span class="material-icons"><b>Дата:</b></span>
+                                <p>вт, 12 ноя, 19:00</p>
+                            </div>
+                            <div class="event-location">
+                                <span class="material-icons"><b>Локация:</b></span>
+                                <p>Областная филармония</p>
+                            </div>
+                            <div class="event-price">
+                                <span class="material-icons"><b>Цена:</b></span>
+                                <p>от 3000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="border: 4px solid #FF9800;">
+                    <a href="6.html">
+                        <img src="../static/4pic.webp" alt="Забег на 5 км" class="event-image">
+                    </a>
+                    <div class="card-content">
+                        <h3 id="qwe">Шоу под дождём «История 15 лет»</h3>
+                        <p>Санкт-Петербургский театр танца Рустама Надыршина представляет премьеру юбилейного спектакля Шоу под дождём «История 15 лет»</p>
+                        <div class="event-details">
+                            <div class="event-date">
+                                <span class="material-icons"><b>Дата:</b></span>
+                                <p>вс, 17 ноя, 19:00</p>
+                            </div>
+                            <div class="event-location">
+                                <span class="material-icons"><b>Локация:</b></span>
+                                <p>Обласная филармония</p>
+                            </div>
+                            <div class="event-price">
+                                <span class="material-icons"><b>Цена:</b></span>
+                                <p>от 10000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <footer>
+        <p>С уважением команда ITshechka.<br>© 2024 My City. Все права защищены.</p>
+        <a href="resourses.html" class="footer-button">Ресурсы</a>
+    </footer>
+    
+    <script src="../static/index.js"></script>
+    <script>
+        function filterEvents() {
+            const filterValue = document.getElementById('event-filter').value;
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                if (filterValue === 'all' || card.dataset.category === filterValue) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
